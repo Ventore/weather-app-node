@@ -9,6 +9,7 @@
   "author": "Bohdan Basov",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.13.1",
     "request": "^2.81.0",
     "yargs": "^7.1.0"
   }
