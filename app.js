@@ -21,11 +21,10 @@ axios.get(geocodeURL).then((res) => {
         throw new Error('Unable to find this address');
     }
     
-    
-    var lat = res.data.result[0].geometry.location.lat;
-    var lng = res.data.result[0].geometry.location.lng;
+    var lat = res.data.results[0].geometry.location.lat;
+    var lng = res.data.results[0].geometry.location.lng;
     var weatherURL = `https://api.darksky.net/forecast/8c5e45f2353686120c421eda1f4301da/${lat},${lng}`;
-    console.log(res.data.result[0].formatted_address);
+    console.log(res.data.results[0].formatted_address);
     
     return axios.get(weatherURL);
     
